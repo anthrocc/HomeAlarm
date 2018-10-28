@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     while(digitalRead(0) == 1);
     printf("Waiting for event\n");
     while(digitalRead(0) == 0);
-    printf("Alarm\n");
+    printf("Alarm %d\n", digitalRead(0));
   }
   /*NOTREACHED*/
   return 0 ;

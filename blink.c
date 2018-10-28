@@ -7,6 +7,9 @@ int main (int argc, char *argv[])
   pinMode (1, OUTPUT) ;
   pinMode (2, OUTPUT) ;
   pinMode (4, OUTPUT) ;
+
+  digitalWrite (4, LOW);  
+
   for (i=0;i<10;i++) {
     digitalWrite (1, HIGH) ; delay (500) ;
     digitalWrite (1,  LOW) ; delay (500) ;

@@ -13,6 +13,9 @@ blink: blink.o
 button: button.o 
 	cc button.o -lwiringPi -o button
 
+alarm: alarm.o libmyifttt.a
+	 cc alarm.o -L. -lmyifttt -lcurl -lwiringPi -o alarm
+
 libmyifttt.a:	ifttt.o
 	ar -rcs libmyifttt.a ifttt.o
 
@@ -22,7 +25,10 @@ ifttt.o: 	ifttt.c ifttt.h
 tester.o:	tester.c ifttt.h
 	$(CC) $(CFLAGS) -c -ansi $<
 
-all:	tester irtester blink button
+alarm.o:	alarm.c ifttt.h
+	$(CC) $(CFLAGS) -c -ansi $<
+
+all:	tester irtester blink button alarm
 
 clean:
 	rm tester irtester *.o

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <curl/curl.h>
+#include "ifttt.h"
 #define BUFFER_MAX 4096
 
  
