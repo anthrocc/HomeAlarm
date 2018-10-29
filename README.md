@@ -1,2 +1,2 @@
 # HouseAlarm
-Sample code for lab05
+Code for a house alarm connected to an IFTTT server
